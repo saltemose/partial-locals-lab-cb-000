@@ -17,9 +17,9 @@ class Student < ActiveRecord::Base
 def self.search(name = 1)
   if name == 1
     self.all
-  else 
+  else
     self.all.find_all { |student| student.name.upcase.include? name.upcase }
   end
-end 
+end
 
 end
